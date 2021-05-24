@@ -13,11 +13,11 @@ if(isset($_POST['tracker'])){
 <table id="" class="table table-bordered table-hover" cellspacing="0" width="100%">
 	<thead>
 	    <tr>
-	        <th>Name</th>
-	        <th><center>Age</center></th>
-	        <th><center>Gender</center></th>
-	        <th><center>Discount</center></th>
-	        <th><center>Price</center></th>
+	        <th>Họ Tên</th>
+	        <th><center>Tuổi</center></th>
+	        <th><center>Giới Tính</center></th>
+	        <th><center>Giảm Giá</center></th>
+	        <th><center>Giá</center></th>
 	    </tr>
 	</thead>
 	<tbody>
@@ -37,10 +37,10 @@ if(isset($_POST['tracker'])){
 				<td align="center">
 					<select class="btn btn-default btn-xs" id="disc<?= $i; ?>">
 						<option value="1">None</option>
-						<option value=".90">Student 10%</option>
-						<option value=".80">Senior Citizen 20%</option>
-						<option value=".70">Children 30%</option>
-						<option value="0">Age 0 - 3 Free</option>
+						<option value=".90">Học Sinh 10%</option>
+						<option value=".80">Người Cao Tuổi 20%</option>
+						<option value=".70">Trẻ Em 30%</option>
+						<option value="0">Tuổi 0 - 3 Miễn Phí</option>
 					</select>
 				</td>
 				<input type="hidden" id="price<?= $i; ?>" value="<?= $l['acc_price']; ?>">
@@ -58,7 +58,7 @@ if(isset($_POST['tracker'])){
 				</td>
 				<td></td>
 				<td></td>
-				<td align="right"><strong>TOTAL:</strong></td>
+				<td align="right"><strong>Tổng:</strong></td>
 				<td>
 					<center>
 						<strong>

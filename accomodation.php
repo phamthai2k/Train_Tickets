@@ -9,7 +9,7 @@ if(isset($_SESSION['departure_date'])){
 ?>
 
 <!DOCTYPE html>
-<html lang="">
+<html lang="vi">
 	<head>
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -19,6 +19,7 @@ if(isset($_SESSION['departure_date'])){
 		<!-- Bootstrap CSS -->
     <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="assets/css/bootstrap-theme.min.css">
+	<link rel="stylesheet" href="./css/reserved.css">
 
 	</head>
 <body style="background-color: lightblue;">
@@ -26,17 +27,17 @@ if(isset($_SESSION['departure_date'])){
 <nav class="navbar navbar-inverse">
   <div class="container-fluid">
     <div class="navbar-header">
-      <a class="navbar-brand" href="#">Medallion Online Ticketing</a>
+      <a class="navbar-brand" href="#">Online Tickets</a>
     </div>
     <ul class="nav navbar-nav">
       <li class="active">
-      	<a href="#">Rerservation
+      	<a href="#">Đặt Vé
       	<span class="glyphicon glyphicon-share-alt" aria-hidden="true"></span>
       	</a>
       </li>
     </ul>
     <ul class="nav navbar-nav navbar-right">
-      <li><a href="index.php"><span class="glyphicon glyphicon-backward"></span> Back To Home</a></li>
+      <li><a href="index.php"><span class="glyphicon glyphicon-backward"></span> Trở Về Trang Chủ</a></li>
     </ul>
   </div>
 </nav>
@@ -47,52 +48,58 @@ if(isset($_SESSION['departure_date'])){
 	<div class="col-md-10">
 		<div class="panel panel-danger">
 			<div class="panel-heading">
-				<h3 class="panel-title">STEPS FOR BOOKING</h3>
+				<h3 class="panel-title">Các Bước Đặt Vé</h3>
 			</div>
 			<div class="panel-body">
 				<div class="row">
 					<div class="col-md-3">
-						<div class="panel panel-default">
+						<a class="step-item" href="reserved.php">
+							<div class="panel panel-default schedule-1">
 							<div class="panel-heading">
-								<h3 class="panel-title">1. ITINERARY
-								</h3>
-							</div>
-							<div class="panel-body">
-								SCHEDULE OF TRAVEL
-							</div>
-						</div>
-					</div>
-					<div class="col-md-3">
-						<div class="panel panel-info">
-							<div class="panel-heading">
-								<h3 class="panel-title">2. ACCOMODATION
+								<h3 class="panel-title">1. LỊCH TRÌNH
 								<span class="glyphicon glyphicon-saved" aria-hidden="true"></span>
 								</h3>
 							</div>
 							<div class="panel-body">
-								ACCOMODATION TYPE
+								LỊCH TRÌNH CHUYẾN ĐI
+							</div>
+						</div>
+					</a>
+					
+					</div>
+					<div class="col-md-3">
+						<div class="panel panel-info schedule-item">
+							<div class="panel-heading">
+								<h3 class="panel-title">2. NƠI NGHỈ CHÂN</h3>
+							</div>
+							<div class="panel-body">
+								KIỂU NHÀ NGHỈ
 							</div>
 						</div>
 					</div>
 					<div class="col-md-3">
-						<div class="panel panel-success">
+						<a href="passenger.php" class="step-item">
+						<div class="panel panel-success schedule-1">
 							<div class="panel-heading">
-								<h3 class="panel-title">3. PASSENGER INFO</h3>
+								<h3 class="panel-title">3. THÔNG TIN HÀNH KHÁCH</h3>
 							</div>
 							<div class="panel-body">
-								PASSENGER DETAILS
+								THÔNG TIN CHI TIẾT
 							</div>
 						</div>
+						</a>
 					</div>
 					<div class="col-md-3">
-						<div class="panel panel-warning">
+						<a class="step-item" href="payment.php">
+							<div class="panel panel-warning schedule-1">
 							<div class="panel-heading">
-								<h3 class="panel-title">4. PAYMENT INFO</h3>
+								<h3 class="panel-title">4. THÔNG TIN THANH TOÁN</h3>
 							</div>
 							<div class="panel-body">
-								TOTAL PAYMENT
+								TỔNG TIỀN
 							</div>
-						</div>
+							</div>
+						</a>
 					</div>
 				</div>
 			</div>
@@ -106,8 +113,8 @@ if(isset($_SESSION['departure_date'])){
 	<div class="col-md-6">
 		<div class="panel panel-default">
 			<div class="panel-body">
-			 <h2>
-			 	<center>ACCOMODATION</center>
+			 <h2>	
+			 	<center>NƠI NGHỈ CHÂN</center>
 			 </h2>
 				<div class="container-fluid">
 					<form class="form-horizontal" role="form" id="form-acc">
@@ -115,16 +122,16 @@ if(isset($_SESSION['departure_date'])){
 							<thead>
 							    <tr>
 							        <th> <span class="glyphicon glyphicon-record" aria-hidden="true"></span> 
-							        Accomodation
+							        Địa Điểm Nghỉ Chân
 							        </th>
 							        <th>
 							        	<center>
-							        		Slots
+							        		Số Chỗ
 							        	</center>
 						        	</th>
 							        <th>
 							        	<center>
-							        		Fare
+							        		Giá Vé
 							        	</center>
 						        	</th>
 							    </tr>
@@ -151,53 +158,14 @@ if(isset($_SESSION['departure_date'])){
 						   			</td>
 						   			<td align="center"><?= $getEcoA['acc_price']; ?></td>
 						   		</tr>
-						   		<tr>
-						   			<td>
-						   				<input value="<?= $getEcoB['acc_id']; ?>" type="radio" name="acc">
-						   				<?= $getEcoB['acc_type']; ?>
-						   			</td>
-						   			<td align="center">
-						   				<?= $getEcoB['acc_slot'] - $totalEcoB['ecoB']; ?>
-						   			</td>
-						   			<td align="center"><?= $getEcoB['acc_price']; ?></td>
-						   		</tr>
-						   		<tr>
-						   			<td>
-						   				<input value="<?= $getTour['acc_id']; ?>" type="radio" name="acc">
-						   				<?= $getTour['acc_type']; ?>
-						   			</td>
-						   			<td align="center">
-						   				<?= $getTour['acc_slot'] - $totalTour['ecoT']; ?>
-						   			</td>
-						   			<td align="center"><?= $getTour['acc_price']; ?></td>
-						   		</tr>
-						   		<tr>
-						   			<td>
-						   				<input value="<?= $getCab['acc_id']; ?>" type="radio" name="acc">
-						   				<?= $getCab['acc_type']; ?>
-						   			</td>
-						   			<td align="center">
-						   				<?= $getCab['acc_slot'] - $totalCab['ecoC']; ?>
-						   			</td>
-						   			<td align="center"><?= $getCab['acc_price']; ?></td>
-						   		</tr>
-						   		<tr>
-						   			<td>
-						   				<input value="<?= $getDel['acc_id']; ?>" type="radio" name="acc">
-						   				<?= $getDel['acc_type']; ?>
-						   			</td>
-						   			<td align="center">
-						   				<?= $getDel['acc_slot'] - $totalDel['ecoD']; ?>
-						   			</td>
-						   			<td align="center"><?= $getDel['acc_price']; ?></td>
-						   		</tr>
+						   		
 						    </tbody>
 					    </table>
 				      <div class="form-group">
-					    <label for="">Total # of Passenger:</label>
+					    <label for="">Số Chỗ Muốn Đặt:</label>
 					    <input type="number" min="1" class="form-control" name="totalPass" plactreholder="Total # of Passenger" autocomplete="off">
 					  </div>
-					  <button type="submit" class="btn btn-success">NEXT
+					  <button type="submit" class="btn btn-success">Tiếp theo
 					  <span class="glyphicon glyphicon-arrow-right" aria-hidden="true"></span>
 					  </button>
 					</form>

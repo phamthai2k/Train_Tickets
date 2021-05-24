@@ -19,6 +19,7 @@ if(isset($_SESSION['tracker'])){
 		<!-- Bootstrap CSS -->
     <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="assets/css/bootstrap-theme.min.css">
+	<link rel="stylesheet" href="./css/reserved.css">
 
 	</head>
 <body style="background-color: lightblue;">
@@ -26,17 +27,17 @@ if(isset($_SESSION['tracker'])){
 <nav class="navbar navbar-inverse">
   <div class="container-fluid">
     <div class="navbar-header">
-      <a class="navbar-brand" href="#">Medallion Online Ticketing</a>
+      <a class="navbar-brand" href="#">Online Tickets</a>
     </div>
     <ul class="nav navbar-nav">
       <li class="active">
-      	<a href="#">Rerservation
+      	<a href="#">Đặt Vé
       	<span class="glyphicon glyphicon-share-alt" aria-hidden="true"></span>
       	</a>
       </li>
     </ul>
     <ul class="nav navbar-nav navbar-right">
-      <li><a href="index.php"><span class="glyphicon glyphicon-backward"></span> Back To Home</a></li>
+      <li><a href="index.php"><span class="glyphicon glyphicon-backward"></span> Trở Về Trang Chủ</a></li>
     </ul>
   </div>
 </nav>
@@ -47,52 +48,55 @@ if(isset($_SESSION['tracker'])){
 	<div class="col-md-10">
 		<div class="panel panel-danger">
 			<div class="panel-heading">
-				<h3 class="panel-title">STEPS FOR BOOKING</h3>
+				<h3 class="panel-title">Các Bước Đặt Vé</h3>
 			</div>
 			<div class="panel-body">
 				<div class="row">
 					<div class="col-md-3">
-						<div class="panel panel-default">
+						<a href="reserved.php" class="step-item">
+							<div class="panel panel-default schedule-1">
 							<div class="panel-heading">
-								<h3 class="panel-title">1. ITINERARY
+								<h3 class="panel-title">1. LỊCH TRÌNH
+								<span class="glyphicon glyphicon-saved" aria-hidden="true"></span>
 								</h3>
 							</div>
 							<div class="panel-body">
-								SCHEDULE OF TRAVEL
+								LỊCH TRÌNH CHUYẾN ĐI
 							</div>
-						</div>
+							</div>
+						</a>
 					</div>
 					<div class="col-md-3">
-						<div class="panel panel-info">
+						<a class="step-item" href="accomodation.php">
+							<div class="panel panel-info schedule-1">
 							<div class="panel-heading">
-								<h3 class="panel-title">2. ACCOMODATION
-								</h3>
+								<h3 class="panel-title">2. NƠI NGHỈ CHÂN</h3>
 							</div>
 							<div class="panel-body">
-								ACCOMODATION TYPE
+								KIỂU NHÀ NGHỈ
 							</div>
 						</div>
+					</a>
 					</div>
 					<div class="col-md-3">
-						<div class="panel panel-success">
+						<a class="step-item" href="passenger.php">
+						<div class="panel panel-success schedule-1">
 							<div class="panel-heading">
-								<h3 class="panel-title">3. PASSENGER INFO
-								</h3>
+								<h3 class="panel-title">3. THÔNG TIN HÀNH KHÁCH</h3>
 							</div>
 							<div class="panel-body">
-								PASSENGER DETAILS
+								THÔNG TIN CHI TIẾT
 							</div>
 						</div>
+						</a>
 					</div>
 					<div class="col-md-3">
-						<div class="panel panel-warning">
+						<div class="panel panel-warning schedule-item">
 							<div class="panel-heading">
-								<h3 class="panel-title">4. PAYMENT INFO
-									<span class="glyphicon glyphicon-saved" aria-hidden="true"></span>
-								</h3>
+								<h3 class="panel-title">4. THÔNG TIN THANH TOÁN</h3>
 							</div>
 							<div class="panel-body">
-								TOTAL PAYMENT
+								TỔNG TIỀN
 							</div>
 						</div>
 					</div>
@@ -109,16 +113,16 @@ if(isset($_SESSION['tracker'])){
 		<div class="panel panel-default">
 			<div class="panel-body">
 			 <h2>
-			 	<center>PAYMENT INFO</center>
+			 	<center>THÔNG TIN THANH TOÁN</center>
 			 </h2>
 			 <br />
 			 <div class="panel panel-success">
 			 	<div class="panel-heading">
-			 		<h3 class="panel-title"><center>DEPARTURE</center></h3>
+			 		<h3 class="panel-title"><center>THÔNG TIN CHUYẾN ĐI</center></h3>
 			 	</div>
 			 	<div class="panel-body">
 			 		<strong>
-			 			<i>Medallion Transport, M/V Lady of All Nations</i>
+			 			<i>Công ty Đường sắt Việt Nam / Vietnam Railway Company</i>
 			 			<h3>
 			 			<?php require_once('data/depart_from_to.php'); 
 			 				echo $origin['origin_desc'];
@@ -126,9 +130,9 @@ if(isset($_SESSION['tracker'])){
 			 			 - 
 			 			 <?= $dest['dest_destination']; ?>
 			 			 </h3>
-			 			<p>Departure Date: <?= $_SESSION['departure_date']; ?> @9:00AM</p>
+			 			<p>Thời gian khởi hành: <?= $_SESSION['departure_date']; ?> - 9:00AM</p>
 			 		</strong>
-			 			<i>Estimated Arrival Time: The Next Day @3:00PM</i><br />
+			 			<i>Thời gian đến dự kiến: Ngày tiếp theo - 3:00PM</i><br />
 			 			<strong>
 			 				<?php require_once('data/get_accomodation.php'); 
 			 					echo $accomodation['acc_type'];
@@ -139,40 +143,40 @@ if(isset($_SESSION['tracker'])){
 
 			 <div class="panel panel-success">
 			 	<div class="panel-heading">
-			 		<h3 class="panel-title">CONTACT INFO</h3>
+			 		<h3 class="panel-title">THÔNG TIN LIÊN LẠC</h3>
 			 	</div>
 			 	<div class="panel-body">
 			 	<?php require_once('data/getBooked.php'); ?>
-			 	<strong>Book By:</strong> <?= ucwords($bookByInfo['book_by']);  ?><br /> 
-			 	<strong>Contact #:</strong> <?= $bookByInfo['book_contact']; ?><br />
-			 	<strong>Address:</strong> <?= $bookByInfo['book_address']; ?><br />
+			 	<strong>Đặt Vé Bởi:</strong> <?= ucwords($bookByInfo['book_by']);  ?><br /> 
+			 	<strong>Số Điện Thoại:</strong> <?= $bookByInfo['book_contact']; ?><br />
+			 	<strong>Địa Chỉ:</strong> <?= $bookByInfo['book_address']; ?><br />
 			 	</div>
 			 </div>
 				<div class="container-fluid">
 				<strong>
 				<span class="glyphicon glyphicon-user" aria-hidden="true"></span>
-				PASSENGERS</strong>
+				Hành Khách</strong>
 					<table id="myTable-party" class="table table-bordered table-hover" cellspacing="0" width="100%">
 							<thead>
 							    <tr>
 							        <th>
 							        	<center>
-							       			Name
+							       			Họ Tên
 							        	</center> 
 							        </th>
 							        <th>
 							        	<center>
-							        		Age
+							        		Tuổi
 							        	</center>
 						        	</th>
 							        <th>
 							        	<center>
-							        		Gender
+							        		Giới Tính
 							        	</center>
 						        	</th>
 						        	 <th>
 							        	<center>
-							        		Departure Price
+							        		Giá
 							        	</center>
 						        	</th>
 							    </tr>
@@ -199,14 +203,14 @@ if(isset($_SESSION['tracker'])){
 						    	<tr>
 						    		<td></td>
 						    		<td></td>
-						    		<td align="right"><strong>TOTAL:</strong></td>
+						    		<td align="right"><strong>Tổng Tiền	:</strong></td>
 						    		<td align="center"><strong><?= $totalPayment; ?></strong></td>
 						    	</tr>
 						    </tbody>
-						    <strong>- Booked ID: <?= $tracker; ?></strong>
+						    <strong>- ID Đặt Vé: <?= $tracker; ?></strong>
 						   </table>
 						   <center>
-							   <a href="index.php" class="btn btn-success">Return Home
+							   <a href="index.php" class="btn btn-success">Quay Lại Trang Chủ
 								   <span class="glyphicon glyphicon-backward" aria-hidden="true"></span>
 							   </a>
 						   </center>

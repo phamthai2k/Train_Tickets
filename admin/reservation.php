@@ -23,17 +23,17 @@ require_once('session_login.php');
 
 <nav class="navbar navbar-inverse">
 	<div class="container-fluid">
-		<a class="navbar-brand" href="#">Online Ticketing Admin Panel</a>
+		<a class="navbar-brand" href="../index.php">Online Tickets Admin</a>
 		<ul class="nav navbar-nav">
-			<li class="active"><a href="reservation.php">Reserved
+			<li class="active"><a href="reservation.php">Vé Đã Được Đặt 
 			<span class="glyphicon glyphicon-list" aria-hidden="true"></span>
 			</a></li>
-			<li class=""><a href="transaction.php">Transaction
+			<li class=""><a href="transaction.php">Giao dịch
 			<span class="glyphicon glyphicon-usd" aria-hidden="true"></span>
 			</a></li>
 		</ul>
 		<ul class="nav navbar-nav navbar-right">
-	      <li><a href="../admin/logout.php"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
+	      <li><a href="../admin/logout.php"><span class="glyphicon glyphicon-log-out"></span> Đăng Xuất</a></li>
 	    </ul>
 	</div>
 </nav>
@@ -185,7 +185,7 @@ require_once('session_login.php');
 	    				console.log(data);
 	    				$('#modal-view-pass').modal('hide');
 	    				showAllBook();
-	    				$('#modal-message').find('.modal-body').text('Transaction Save Successfully!');
+	    				$('#modal-message').find('.modal-body').text('Lưu Giao Dịch Thành Công!');
 	    				$('#modal-message').modal('show');
 	    			},
 	    			error: function(){

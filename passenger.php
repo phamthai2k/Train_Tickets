@@ -19,6 +19,7 @@ if(isset($_SESSION['accomodation'])){
 		<!-- Bootstrap CSS -->
     <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="assets/css/bootstrap-theme.min.css">
+	<link rel="stylesheet" href="./css/reserved.css">
 
 	</head>
 <body style="background-color: lightblue;">
@@ -26,17 +27,17 @@ if(isset($_SESSION['accomodation'])){
 <nav class="navbar navbar-inverse">
   <div class="container-fluid">
     <div class="navbar-header">
-      <a class="navbar-brand" href="#">Medallion Online Ticketing</a>
+      <a class="navbar-brand" href="#">Online Tickets</a>
     </div>
     <ul class="nav navbar-nav">
       <li class="active">
-      	<a href="#">Rerservation
+      	<a href="#">Đặt Vé
       	<span class="glyphicon glyphicon-share-alt" aria-hidden="true"></span>
       	</a>
       </li>
     </ul>
     <ul class="nav navbar-nav navbar-right">
-      <li><a href="index.php"><span class="glyphicon glyphicon-backward"></span> Back To Home</a></li>
+      <li><a href="index.php"><span class="glyphicon glyphicon-backward"></span> Trở Về Trang Chủ</a></li>
     </ul>
   </div>
 </nav>
@@ -47,53 +48,57 @@ if(isset($_SESSION['accomodation'])){
 	<div class="col-md-10">
 		<div class="panel panel-danger">
 			<div class="panel-heading">
-				<h3 class="panel-title">STEPS FOR BOOKING</h3>
+				<h3 class="panel-title">Các Bước Đặt Vé</h3>
 			</div>
 			<div class="panel-body">
 				<div class="row">
 					<div class="col-md-3">
-						<div class="panel panel-default">
+						<a href="reserved.php" class="step-item">
+						<div class="panel panel-default schedule-1">
 							<div class="panel-heading">
-								<h3 class="panel-title">1. ITINERARY
-								</h3>
-							</div>
-							<div class="panel-body">
-								SCHEDULE OF TRAVEL
-							</div>
-						</div>
-					</div>
-					<div class="col-md-3">
-						<div class="panel panel-info">
-							<div class="panel-heading">
-								<h3 class="panel-title">2. ACCOMODATION
-								</h3>
-							</div>
-							<div class="panel-body">
-								ACCOMODATION TYPE
-							</div>
-						</div>
-					</div>
-					<div class="col-md-3">
-						<div class="panel panel-success">
-							<div class="panel-heading">
-								<h3 class="panel-title">3. PASSENGER INFO
+								<h3 class="panel-title">1. LỊCH TRÌNH
 								<span class="glyphicon glyphicon-saved" aria-hidden="true"></span>
 								</h3>
 							</div>
 							<div class="panel-body">
-								PASSENGER DETAILS
+								LỊCH TRÌNH CHUYẾN ĐI
+							</div>
+						</div>
+						</a>
+					</div>
+					<div class="col-md-3">
+						<a href="accomodation.php" class="step-item">
+							<div class="panel panel-info schedule-1">
+							<div class="panel-heading">
+								<h3 class="panel-title">2. NƠI NGHỈ CHÂN</h3>
+							</div>
+							<div class="panel-body">
+								KIỂU NHÀ NGHỈ
+							</div>
+							</div>
+						</a>
+					</div>
+					<div class="col-md-3">
+						<div class="panel panel-success schedule-item">
+							<div class="panel-heading">
+								<h3 class="panel-title">3. THÔNG TIN HÀNH KHÁCH</h3>
+							</div>
+							<div class="panel-body">
+								THÔNG TIN CHI TIẾT
 							</div>
 						</div>
 					</div>
 					<div class="col-md-3">
-						<div class="panel panel-warning">
+						<a href="payment.php" class="step-item">
+							<div class="panel panel-warning schedule-1">
 							<div class="panel-heading">
-								<h3 class="panel-title">4. PAYMENT INFO</h3>
+								<h3 class="panel-title">4. THÔNG TIN THANH TOÁN</h3>
 							</div>
 							<div class="panel-body">
-								TOTAL PAYMENT
+								TỔNG TIỀN
 							</div>
-						</div>
+							</div>
+						</a>
 					</div>
 				</div>
 			</div>
@@ -107,28 +112,27 @@ if(isset($_SESSION['accomodation'])){
 	<div class="col-md-4">
 		<div class="alert alert-danger">
 			<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-			<strong>Message!</strong> Please review your passenger information.
-			You cannot change your reservation once you proceed. 
+			<strong>Thông báo!</strong> Vui lòng xem lại thông tin hành khách của bạn. Bạn không thể thay đổi thông tin sau khi bạn tiếp tục.. 
 		</div>
 		<div class="panel panel-default">
 			<div class="panel-body">
 			 <h2>
-			 	<center>PASSENGER INFO</center>
+			 	<center>Thông Tin Đặt Vé</center>
 			 </h2>
 				<div class="container-fluid">
 					<form class="form-horizontal" role="form" id="form-pass">
 					  <div class="form-group">
-					    <label for="">Booked By:</label>
-					    <input type="text" class="form-control" id="book-by" placeholder="Enter Name"
+					    <label for="">Đặt vé bởi:</label>
+					    <input type="text" class="form-control" id="book-by" placeholder="Nhập Tên Đầy Đủ"
 					    autofocus="" required="" autocomplete="off">
 					  </div>
 					  <div class="form-group">
-					    <label for="">Contact:</label>
-					    <input type="text" class="form-control" id="cont" placeholder="Enter Contact" required="" autocomplete="off">
+					    <label for="">Số Điện Thoại:</label>
+					    <input type="number" class="form-control" id="cont" placeholder="Nhập Số Điện Thoại" required="" autocomplete="off">
 					  </div>
 					  <div class="form-group">
-					    <label for="">Address:</label>
-					    <input type="text" class="form-control" id="address" placeholder="Enter Address" required="" autocomplete="off">
+					    <label for="">Địa Chỉ:</label>
+					    <input type="text" class="form-control" id="address" placeholder="Nhập Địa Chỉ" required="" autocomplete="off">
 					  </div>
 					<br />
 					<?php 
@@ -138,26 +142,26 @@ if(isset($_SESSION['accomodation'])){
 					?>
 					  <div class="panel panel-primary">
 					  	<div class="panel-heading">
-					  		<h3 class="panel-title">Booked(<?= $count; ?>)</h3>
+					  		<h3 class="panel-title">Hành Khách <?= $count; ?></h3>
 					  	</div>
 					  	<div class="panel-body">
 					  		<div class="container-fluid">
 					  			<div class="form-group">
-								    <label for="">Full Name (<?= $count; ?>):</label>
+								    <label for="">Tên Đầy Đủ</label>
 								    <input type="text" class="form-control" id="fN<?php echo $i; ?>"
-								    placeholder="Enter Fullname" required autocomplete="off">
+								    placeholder="Nhập Tên Đầy Đủ" required autocomplete="off">
 								  </div>
 
 								  <div class="form-group">
-								    <label for="">Age: (<?= $count; ?>):</label>
+								    <label for="">Tuổi</label>
 								    <input type="number" class="form-control" id="age<?php echo $i; ?>"
-								    placeholder="Enter Age" required autocomplete="off">
+								    placeholder="Nhập Tuổi" required autocomplete="off">
 								  </div>
 								  <div class="form-group">
-								    <label for="">Gender: (<?= $count; ?>):</label>
+								    <label for="">Giới Tính</label>
 								    <select class="btn btn-default" id="gender<?php echo $i; ?>">
-								    	<option value="Male">Male</option>
-								    	<option value="Female">Female</option>
+								    	<option value="Nam">Nam</option>
+								    	<option value="Nữ">Nữ</option>
 								    </select>
 								  </div>
 					  		</div>
@@ -167,7 +171,7 @@ if(isset($_SESSION['accomodation'])){
 					$count++;
 					 	}//end for
 					 ?>
-					  <button type="submit" class="btn btn-success">NEXT
+					  <button type="submit" class="btn btn-success">Tiếp theo
 					  <span class="glyphicon glyphicon-arrow-right" aria-hidden="true"></span>
 					  </button>
 					</form>

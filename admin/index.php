@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="">
+<html lang="vi">
 	<head>
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -15,7 +15,7 @@
 
 <nav class="navbar navbar-inverse">
 	<div class="container-fluid">
-		<a class="navbar-brand" href="#"> Online Ticketing</a>
+		<a class="navbar-brand" href="#"> Online Tickets</a>
 		<ul class="nav navbar-nav">
 			<li>
 				<a href="#"></a>
@@ -25,7 +25,7 @@
 			</li>
 		</ul>
 		<ul class="nav navbar-nav navbar-right">
-	      <li><a href="../"><span class="glyphicon glyphicon-backward"></span> Return Home</a></li>
+	      <li><a href="../"><span class="glyphicon glyphicon-backward"></span> Quay Lại Trang Chủ</a></li>
 	    </ul>
 	</div>
 </nav>
@@ -36,32 +36,32 @@
 <div class="col-md-6">
 	<div class="panel panel-success">
 		<div class="panel-heading">
-			<h3 class="panel-title">Please Login Here</h3>
+			<h3 class="panel-title">ĐĂNG NHẬP</h3>
 		</div>
 		<div class="panel-body">
 			<form class="form-horizontal" role="form" id="form-login">
 			  <div class="form-group">
-			    <label class="control-label col-sm-2" for="un">Username:</label>
+			    <label class="control-label col-sm-2" for="un">Tài Khoản:</label>
 			    <div class="col-sm-10">
-			      <input type="text" class="form-control" id="un" placeholder="Enter Username" autofocus="" required="">
+			      <input type="text" class="form-control" id="un" placeholder="Nhập tài khoản" autofocus="" required="">
 			    </div>
 			  </div>
 			  <div class="form-group">
-			    <label class="control-label col-sm-2" for="pwd">Password:</label>
+			    <label class="control-label col-sm-2" for="pwd">Mật Khẩu:</label>
 			    <div class="col-sm-10"> 
-			      <input type="password" class="form-control" id="pwd" placeholder="Enter password" required="">
+			      <input type="password" class="form-control" id="pwd" placeholder="Nhập mật khẩu" required="">
 			    </div>
 			  </div>
 			  <div class="form-group"> 
 			    <div class="col-sm-offset-2 col-sm-10">
 			      <div class="checkbox">
-			        <label><input type="checkbox"> Remember me</label>
+			        <label><input type="checkbox"> Lưu mật khẩu</label>
 			      </div>
 			    </div>
 			  </div>
 			  <div class="form-group"> 
 			    <div class="col-sm-offset-2 col-sm-10">
-			      <button type="submit" class="btn btn-default">Login
+			      <button type="submit" class="btn btn-danger">Đăng Nhập
 			      <span class="glyphicon glyphicon-check" aria-hidden="true"></span>
 			      </button>
 			    </div>

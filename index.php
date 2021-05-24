@@ -1,9 +1,7 @@
 ﻿<!DOCTYPE html>
-
-
+<html lang="vi">
 <head>
-	
-<meta charset="utf-8">
+<meta charset="utf-8" >
 	
 <meta name="viewport" content="width=devidev-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 	
@@ -43,12 +41,13 @@
 <!-- [ DEFAULT STYLESHEET ] 
         
 =========================================================================================================================-->
-	
-<link rel="stylesheet" type="text/css" href="css/style.css">
         
 <link rel="stylesheet" type="text/css" href="css/responsive.css">
 	
 <link rel="stylesheet" type="text/css" href="css/color/rose.css">
+<link rel="stylesheet" type="text/css"  href="./css/app.css">
+
+<link rel="stylesheet" href="./css/reserved.css">
         
 
 </head>
@@ -104,32 +103,27 @@
           
 </button>
             
-<a class="navbar-brand" href="index.html">Online<span class="themecolor"> T</span>ickets</a>
+<a class="navbar-brand" href="index.php">Online<span class="themecolor"> T</span>ickets</a>
         
 </div>
 
         
 <!-- Collect the nav links, forms, and other content for toggling -->
-        
-<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-          
+<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">      
 <ul class="nav navbar-nav navbar-right">
             
-<li><a href="#home" class="page-scroll"><h3>Home</h3></a></li>
+<li><a href="#home" class="page-scroll"><h3>Trang chủ</h3></a></li>
+<li><a href="reserved.php" class="page-scroll"><h3>Đặt vé</h3></a></li>
+<li><a href="#services" class="page-scroll"><h3>Vé đã đặt</h3></a></li>
             
-<li><a href="#two" class="page-scroll"><h3>About</h3></a></li>
+<li><a href="#about-us" class="page-scroll"><h3>Về chúng tôi</h3></a></li>
                                    
-<li><a href="#one" class="page-scroll"><h3>Inspiration</h3></a></li>
                                  
-<li><a href="#three" class="page-scroll"><h3>Services</h3></a></li>
             
-<li><a href="#four" class="page-scroll"><h3>Contact</h3></a></li>
-
-<li><a href="admin/" class="page-scroll"><h3>Login</h3></a></li>
-          
+<li><a href="#contact" class="page-scroll"><h3>Liên hệ</h3></a></li>          
 </ul>
-        
-</div>
+<div>
+      
 <!-- /.navbar-collapse -->
       
 </div><!-- /.container-fluid -->
@@ -159,13 +153,13 @@
         
 <h1 class="main-heading-title"><span class="main-element themecolor" data-elements=" Online Ticket, Online Ticket, Online Ticket"></span></h1>
  
-<h1 class="main-heading-title"><span class="main-element themecolor" data-elements=" Reservation System, Reservation System, Reservation System"></span></h1>
+<h1 class="main-heading-title"><span class="main-element themecolor" data-elements="Dịch Vụ Đặt Vé Tàu, Dịch Vụ Đặt Vé Tàu, Dịch Vụ Đặt Vé Tàu"></span></h1>
        
-<p class="main-heading-text">WELCOME TO,<br/>ONLINE TICKET RESERVATION SYSTEM</p>
+<p class="main-heading-text">CHÀO MỪNG BẠN ĐẾN VỚI<br/>DỊCH VỤ ĐẶT VÉ TÀU ONLINE</p>
         
 <div class="btn-bar">
           
-<a href="reserved.php" class="btn btn-custom theme_background_color">Reserve Now</a>
+<a href="reserved.php" class="btn btn-custom theme_background_color">Đặt Ngay</a>
                  
 </div>
       
@@ -190,16 +184,16 @@
                    
 <div class="main-heading-content col-md-12 col-sm-12 text-center">
         
-<h1 class="main-heading-title">We are Creative</h1>
+<h1 class="main-heading-title">CHÚNG TÔI SẼ GIÚP BẠN</h1>
         
-<p class="main-heading-text">Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore,
-<br/>cum soluta nobis est eligendi optio cumque nihil impedit quo facilis</p>
+<p class="main-heading-text">Đặt vé ngay hôm nay đễ nhận được những ưu đãi hấp dẫn nhất
+<br/>Dịch vụ của chúng tôi đảm bảo an toàn, chất lượng đến khách hàng</p>
         
 <div class="btn-bar">
           
-<a href="#" class="btn btn-custom theme_background_color">Ge Started</a>
+<a href="#" class="btn btn-custom theme_background_color">Bắt Đầu Ngay</a>
           
-<a href="#" class="btn btn-custom-outline">Contact Us</a>
+<a href="#contact" class="btn btn-custom-outline">Liên Hệ Với Chúng Tôi</a>
         
 </div>
       
@@ -227,15 +221,16 @@
  
 <section class="aboutus white-background black" id="one">
      
-<div class="container">
+<div id="about-us" class="container">
+<div  class="container">
          
 <div class="row">
              
-<div class="col-md-12 text-center black">
+<div   class="col-md-12 text-center black">
                  
-<h3 class="title">ABOUT <span class="themecolor">US</span></h3>
+<h3 class="title">Về <span class="themecolor">Chúng Tôi</span></h3>
             
-<p class="a-slog">Lorem ipsum dolor sit amet ne onsectetuer adipiscing elit. Aenean commodo ligula eget dolor in tashin ty</p> 
+<!-- <p class="a-slog">Lorem ipsum dolor sit amet ne onsectetuer adipiscing elit. Aenean commodo ligula eget dolor in tashin ty</p>  -->
              
 </div>
          
@@ -255,9 +250,9 @@
               
 <i class="fa fa-newspaper-o"></i>
               
-<h4>POWER OF FLEXIBILITY</h4>
+<h4>ĐẶT VÉ DỄ DÀNG</h4>
               
-<p class="black">Nulla vitae libero pharetra augue. Etiam porta malesuada magna mollis euismod consectetur sem urdom tempus porttitor.</p>
+<p class="black">Thao tác đơn giản, đặt vé giữ chỗ nhanh chóng chỉ 30s.</p>
             
 </div> <!-- / margin -->
           
@@ -269,9 +264,9 @@
               
 <i class="fa fa-diamond"></i>
               
-<h4>FULLY RESPONSIVE</h4>
+<h4>ĐA DẠNG DỊCH VỤ</h4>
               
-<p class="black">Nulla vitae libero pharetra augue. Etiam porta malesuada magna mollis euismod consectetur sem urdom tempus porttitor.</p>
+<p class="black">Hạng thấp đến cao, vé nào cũng có. Dòng xe đa dạng phục vụ mọi nhu cầu.</p>
             
 </div> <!-- / margin -->
           
@@ -283,9 +278,9 @@
               
 <i class="fa fa-area-chart"></i>
               
-<h4>GREAT WEB IDEAS</h4>
+<h4>PHỤC VỤ CHU ĐÁO</h4>
               
-<p class="black">Nulla vitae libero pharetra augue. Etiam porta malesuada magna mollis euismod consectetur sem urdom tempus porttitor.</p>
+<p class="black">Dịch vụ chuyên nghiệp, phục vụ chu đáo, nhân sự tận tâm..</p>
             
 </div> <!-- / margin -->
           
@@ -319,7 +314,7 @@
      
 <div class="overlay">
          
-<div class="container">
+<div id="services" class="container">
              
 <div class="row">
                 
@@ -329,19 +324,19 @@
              
  <div class="subheading">
                  
- <h4>Are You Ready To <span class="themecolor">Enjoy?</span></h4>
+ <h4>Bạn Đã Sẵn Sàng Để <span class="themecolor">Tận Hưởng?</span></h4>
            
    </div>
              
  <div class="heading">
               
-  <h2>inspire your customer here!</h2>
+  <h2>THÔNG TIN ĐẶT VÉ CỦA BẠN Ở ĐÂY</h2>
           
     </div>
               
 <div class="">
               
-  <a class="btn btn-custom-outline" href="#"><span>get started</span></a>
+  <a class="btn btn-custom-outline" href="#"><span>Xem Ngay</span></a>
         
       </div>
         
@@ -378,9 +373,10 @@
           
 <div class="col-md-12">
               
-<h3 class="title">We Are <span class="themecolor">Good In</span></h3>
+<h3 class="title">Chúng Tôi <span class="themecolor">ĐÃ LÀM</span></h3>
             
-<p class="a-slog">Lorem ipsum dolor sit amet ne onsectetuer adipiscing elit. Aenean commodo ligula eget dolor in tashin ty</p>
+<p class="a-slog">An toàn là ưu tiên số 1
+Chúng tôi tuân thủ Pháp luật và đặt An toàn của khách hàng lên hàng đầu, vì vậy chúng tôi luôn chú trọng vào việc cải thiện liên tục Chất lượng Phương tiện và Dịch vụ để phục vụ nhu cầu đa dạng của khách hàng</p>
           
 </div> <!-- /col -->
         
@@ -391,183 +387,7 @@
         
 <div class="row">
           
-<div class="col-sm-4">
-            
-<div class="nim-service margin-bottom">
-              
-<i class="fa fa-diamond"></i>
-              
-<div class="nim-service-detail">
-                
-<h4>Strategy Solutions</h4>
-                
-<p>Lorem ipsum dolor sit amet ne onsectetuer adipiscing elit. Aenean commodo ligula eget dolor in tashin ty dolor site amet ne onseceruter adipiscing</p>
-   
-           </div> <!-- /nim-service-detail -->
-            
-</div> <!-- /nim-service margin-bottom -->
-          
-</div> <!-- /col -->
-
-          
-<div class="col-sm-4">
-            
-<div class="nim-service margin-bottom">
-             
- <i class="fa fa-tablet"></i>
-             
- <div class="nim-service-detail">
-              
-  <h4>Digital Design</h4>
-              
-  <p>Lorem ipsum dolor sit amet ne onsectetuer adipiscing elit. Aenean commodo ligula eget dolor in tashin ty dolor site amet ne onseceruter adipiscing</p>
- 
-             </div> <!-- /nim-service-detail -->
-            
-</div> <!-- /nim-service margin-bottom -->
-          
-</div> <!-- /col -->
-
-          
-<div class="col-sm-4">
-            
-<div class="nim-service margin-bottom">
-              
-<i class="fa fa-magic"></i>
-              
-<div class="nim-service-detail">
-                
-<h4>SEO</h4>
-                
-<p>Lorem ipsum dolor sit amet ne onsectetuer adipiscing elit. Aenean commodo ligula eget dolor in tashin ty dolor site amet ne onseceruter adipiscing</p>
- 
-             </div> <!-- /nim-service-detail -->
-            
-</div> <!-- /nim-service margin-bottom -->
-         
- </div> <!-- /col -->       
-        
-</div> <!-- end row -->
-
-        
-<div class="row">
-          
-<div class="col-sm-4">
-            
-<div class="nim-service margin-bottom">
-             
- <i class="fa fa-rocket"></i>
-             
- <div class="nim-service-detail">
-               
- <h4>Graphic Design</h4>
-                
-<p>Lorem ipsum dolor sit amet ne onsectetuer adipiscing elit. Aenean commodo ligula eget dolor in tashin ty dolor site amet ne onseceruter adipiscing</p>
-          
-    </div> <!-- /nim-service-detail -->
-            
-</div> <!-- /nim-service margin-bottom -->
-         
- </div> <!-- /col -->
-
-          
-<div class="col-sm-4">
-           
- <div class="nim-service margin-bottom">
-              
-<i class="fa fa-map-marker"></i>
-              
-<div class="nim-service-detail">
-                
-<h4>Analystics</h4>
-                
-<p>Lorem ipsum dolor sit amet ne onsectetuer adipiscing elit. Aenean commodo ligula eget dolor in tashin ty dolor site amet ne onseceruter adipiscing</p>
-             
- </div> <!-- /nim-service-detail -->
-            
-</div> <!-- /nim-service margin-bottom -->
-          
-</div> <!-- /col -->
-
-          
-<div class="col-sm-4">
-            
-<div class="nim-service margin-bottom">
-             
- <i class="fa fa-paypal"></i>
-              
-<div class="nim-service-detail">
-               
- <h4>Dedicated Support</h4>
-                
-<p>Lorem ipsum dolor sit amet ne onsectetuer adipiscing elit. Aenean commodo ligula eget dolor in tashin ty dolor site amet ne onseceruter adipiscing</p>
-              
-</div> <!-- /nim-service-detail -->
-            
-</div> <!-- /nim-service margin-bottom -->
-          
-</div> <!-- /col -->         
-        
-</div> <!-- end row -->
-
-        
-<div class="row">
-          
-<div class="col-sm-4">
-            
-<div class="nim-service margin-bottom">
-             
- <i class="fa fa-bar-chart-o"></i>
-              
-<div class="nim-service-detail">
-                
-<h4>Truly Multipurpose</h4>
-               
- <p>Lorem ipsum dolor sit amet ne onsectetuer adipiscing elit. Aenean commodo ligula eget dolor in tashin ty dolor site amet ne onseceruter adipiscing</p>
-             
- </div> <!-- /nim-service-detail -->
-           
- </div> <!-- /nim-service margin-bottom -->
-          
-</div> <!-- /col -->
-
-          
-<div class="col-sm-4">
-            
-<div class="nim-service margin-bottom">
-              
-<i class="fa fa-delicious"></i>
-              
-<div class="nim-service-detail">
-               
- <h4>Unlimited Colors</h4>
-                
-<p>We put a lot of effort in design, as it’s the most important ingredient of successful website.Sed ut perspiciatis unde omnis iste natus error sit.</p>
-              
-</div> <!-- /nim-service-detail -->
-            
-</div> <!-- /nim-service margin-bottom -->
-         
- </div> <!-- /col -->
-
-          
-<div class="col-sm-4">
-           
- <div class="nim-service margin-bottom">
-              
-<i class="fa fa-pencil-square"></i>
-             
- <div class="nim-service-detail">
-                
-<h4>Easy to customize</h4>
-                
-<p>Lorem ipsum dolor sit amet ne onsectetuer adipiscing elit. Aenean commodo ligula eget dolor in tashin ty dolor site amet ne onseceruter adipiscing</p>
-             
- </div> <!-- /nim-service-detail -->
-            
-</div> <!-- /nim-service margin-bottom -->
-          
-</div> <!-- /col -->                      
+                  
        
  </div> <!-- end row -->
 
@@ -591,12 +411,12 @@
 <!--sub-form-->
 <section class="sub-form text-center" id="eight">
   
-<div class="container">
+<div id="contact" class="container">
     <div class="col-md-12">
         
-<h3 class="title">Subscribe to our <span class="themecolor"> News letter</span></h3>
+<h3 class="title">Đăng Ký Để Nhận<span class="themecolor"> Thông Báo Mới</span></h3>
             
-<p class="lead">Lorem ipsum dolor sit amet ne onsectetuer adipiscing elit. Aenean commodo ligula eget dolor in tashin ty</p>
+<p class="lead">Online TicKets - Mang đến sự tiện lợi cho khách hàng</p>
     
 </div> 
     
@@ -614,7 +434,7 @@
            
 <span class="input-group-btn">
             
-<button type="submit" class="btn btn-default">SUBSCRIBE <i class="fa fa-envelope"></i> </button>
+<button type="submit" class="btn btn-default">ĐĂNG KÝ <i class="fa fa-envelope"></i> </button>
             
 </span> </div>
           
@@ -655,11 +475,10 @@
       
 <div class="col-md-4">
         
-<p class="footer-links"><a href="#">Terms of Use</a> <a href="#">Privacy Policy</a></p>
       
 </div>
       
-<div class="col-md-4"> <small>&copy; 2018, Brought To You By <a href="https://code-projects.org/">code-projects.org</a> </small></div>
+<div class="col-md-4"> <small>&copy; 2021, Brought To You By <a href="">Nhóm5</a> </small></div>
       
 <div class="col-md-4"> 
         
